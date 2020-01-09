@@ -22,3 +22,9 @@ export const selectIsCollectionFetching = createSelector(
   [selectShop],
   shop => shop.isFetching
 );
+
+// this => !! turns any truthy or falsy value into a boolean
+export const selectIsCollectionsLoad = createSelector(
+  [selectShop],
+  shop => !!shop.collections
+);
